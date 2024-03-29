@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap');
 /* 
 body {
   margin: 0;
@@ -18,12 +20,40 @@ code {
 } */
 
 @layer base {
- :root{
-  --background:hsl(165, 50%, 97%);
- }
-
- body {
-  background-color: var(--background);
- }
-
+    :root {
+        --background:hsl(218, 39%, 11%);
+        --title:hsl(210, 100%, 72%);
+        --text-color: hsl(205, 100%, 88%) ;
+        --hover: hsl(210, 100%, 72%); 
+        --background-image: hsl(215, 42%, 9%);
+        --border-color: hsl(211, 66%, 37%); 
+    }
 }
+
+@layer components {
+    :root {
+        --header-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.073),
+            0px 0px 5.3px rgba(0, 0, 0, 0.105), 0px 0px 10px rgba(0, 0, 0, 0.13),
+            0px 0px 17.9px rgba(0, 0, 0, 0.155),
+            0px 0px 33.4px rgba(0, 0, 0, 0.187),
+            0px 0px 80px rgba(0, 0, 0, 0.14);
+
+        --button: hsl(209, 100%, 19%); 
+    }
+}
+
+body {
+    background-color: hsl(218, 39%, 11%);
+    margin: 0;
+}
+.header {
+    box-shadow: var(--header-shadow);
+}
+.hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
